@@ -31,8 +31,3 @@ form.onsubmit = (e) => {
 form.append(input, button);
 body.append(form, ul);
 
-// ucreate this in react without jsx
-
-// using createRoot and createElement
-
-//  fo remove padding in the footnotes tab feature/FOotnotes-core
