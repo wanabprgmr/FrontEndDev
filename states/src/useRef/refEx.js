@@ -1,7 +1,9 @@
 import React , {useRef, useState}from "react";
+import UseWriteTofile from "../customHooks/useWriteToFile";
 
 function RefTutorial(){
     const inputRef = useRef(null)
+    const fileNameRef = useRef("textfile.txt")
     const [value, setValue] = useState("")
     
     function updateP(){
@@ -10,6 +12,9 @@ function RefTutorial(){
     }
     function focus(){
         inputRef.current.focus()
+    }
+    function saveToFile(){
+        UseWriteTofile(inputRef.current.value, fileNameRef.current.value + ".txt")
     }
 
 
@@ -22,6 +27,8 @@ function RefTutorial(){
         <button onClick={focus}>click to focus</button>
         <div>
         <button onClick={updateP}>Click to update</button>
+        <input placeholder="Enter file name" ref={fileNameRef}></input>
+        <button onClick={saveToFile}>Save to file</button>
         </div>
         <p>------------------------------------------------------</p>
         </>

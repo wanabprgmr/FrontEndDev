@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import useLogger from "../customHooks/useLogger";
 
 const StateTutorial = () => {
   const [inputValue, setInputValue] = useState("Pedro");
+  const logs = useLogger(inputValue)
 
   let onChange = (event) => {
     const newValue = event.target.value;
