@@ -25,8 +25,8 @@ function RefTutorial(){
         <p>{value}</p>
         <input placeholder="Enter...." ref={inputRef}></input>
         <button onClick={focus}>click to focus</button>
-        <div>
         <button onClick={updateP}>Click to update</button>
+        <div>
         <input placeholder="Enter file name" ref={fileNameRef}></input>
         <button onClick={saveToFile}>Save to file</button>
         </div>
